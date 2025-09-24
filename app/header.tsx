@@ -1,3 +1,3 @@
 export default function Header() {
-  return <></>;
+  return <div className={"w-full h-8 bg-header"}></div>;
 }

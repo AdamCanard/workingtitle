@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={"w-dvw h-dvh"}>
+      <body className={"flex flex-col w-dvw h-dvh"}>
         <Header />
         {children}
         <Footer />
