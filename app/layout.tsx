@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Header from "./header";
+import Footer from "./footer";
 
 export const metadata: Metadata = {
   title: "Working Title Collective",
@@ -13,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={"w-dvw h-dvh"}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
