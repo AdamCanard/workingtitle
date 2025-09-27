@@ -71,6 +71,21 @@ There is no labor cost factored in, I will be doing this as volunteer hoping to 
 > 40-55/hour for 3 hour rental
 > projector screen, no projector
 
+[Renfrew Community Association](https://www.renfrewyyc.ca/hall-rental)
+> Social Room is crazy, capacity 45
+> Crazy location, actuyally goated spot
+> 50$/hour min 3 hours, 150$
+> 2 Pool tables, Darts, Shiffleboard
+> big TV with chromecast
+
+[Winston Heights](https://winstonheights.ca/hall-rentals/rental-information/)
+> Founders Rooms is small and cheap, capacity 15
+> Crazy location central location
+> 25$/hour, no displayed min. no deposit
+> Large Monitor, whiteboards, small fridge
+> Good for starting out
+>
+> North Hall is also a good spot for larger event
 
 
 
