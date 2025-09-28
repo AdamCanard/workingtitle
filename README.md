@@ -60,6 +60,16 @@ If you like talking to someone, ask to scan their code. You can instantly connec
 ### Cost
 There is no labor cost factored in, I will be doing this as volunteer hoping to just make things grow. Profits will be divided amoung organizers but the goal for balmers peak is to make events that pay for themselves NOT TO TAKE MONEY FROM PEOPLE. This is an exchange of services and community. If we are can grow and be succesful money will come through that just getting enough people at the events, even with low margins on drinks we can make some money
 
+Below calculations are for the social room
+Expected Costs:
+- Rent 50$/hr for 3 hours, 150$ 
+- PAL, 115$ (Annually possible, Contact christine.lishman@palcanada.com)
+- Private Resale SEL 25$
+
+Total 290$
+if tickets cost 6.5, cost is covered. Liqor margins is all profit + non-alc + snack sales
+
+
 [Hall Rentals](https://mycalgary.com/?s=hall+rentals)
 
 [North Haven rental](https://northhavenyyc.ca/hall-rentals)
@@ -73,7 +83,7 @@ There is no labor cost factored in, I will be doing this as volunteer hoping to 
 
 [Renfrew Community Association](https://www.renfrewyyc.ca/hall-rental)
 > Social Room is crazy, capacity 45
-> Crazy location, actuyally goated spot
+> Crazy location, actually goated spot
 > 50$/hour min 3 hours, 150$
 > 2 Pool tables, Darts, Shiffleboard
 > big TV with chromecast
