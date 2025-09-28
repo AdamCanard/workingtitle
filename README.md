@@ -32,6 +32,15 @@ All money will be spent through the website, no square or POS implementation, pu
 #### Event Software
 Create an account, gives you a unique qr code that can be scanned by any phone.
 
+#### Endpoints Needed
+
+> - CRUD for accounts (user profiles -- CRUD for photo, qr code linking to profile (only CR), details, socials)
+> - CRUD for events
+> - CRUD for tickets (includes QR code generation)
+> - CRUD for drink and food tickets (tickets scanned by bartenders, activate before use, consumable tickets)
+> - /login and /logout with JWT
+> - /buy event ticket (with [Helcim](https://devdocs.helcim.com/docs/payment-api) integration)
+> - /verify entry or drink or food tickets (allow one entry per ticket)
 #### QR Interactions
 Anyone can scan your QR code, (Maybe later we could allow people to import designs).
 
