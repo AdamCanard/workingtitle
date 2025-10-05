@@ -1,3 +1,5 @@
+"use client";
+
 export default function Home() {
   return (
     <main
@@ -16,8 +18,8 @@ interface IFormInput {
 }
 function Card() {
   const formInputs: IFormInput[] = [
-    { label: "First Name", name: "firstName", regex: "[A-Za-z]" },
-    { label: "Last Name", name: "lastName", regex: "[A-Za-z]" },
+    { label: "First Name", name: "first_name", regex: "[A-Za-z]" },
+    { label: "Last Name", name: "last_name", regex: "[A-Za-z]" },
     {
       label: "Email",
       name: "email",
@@ -25,11 +27,28 @@ function Card() {
     },
   ];
 
+  const handleClick = async () => {
+    const formData = new FormData();
+    formData.append("first_name", "Adam");
+    formData.append("last_name", "Cunard");
+    formData.append("email", "azcunard@gmail.com");
+    console.log(formData);
+    try {
+      const response = await fetch("http://localhost:5000/users", {
+        method: "POST",
+        body: formData,
+      });
+      console.log(await response.json());
+    } catch (e) {
+      console.log(e);
+    }
+  };
   return (
     <div
       className={
         "border-2 border-black rounded-md w-full h-full max-w-[480px] max-h-2/3 bg-foreground"
       }
+      onClick={handleClick}
     >
       <FormRenderer inputs={formInputs} />
     </div>
@@ -37,6 +56,5 @@ function Card() {
 }
 
 function FormRenderer(props: { inputs: IFormInput[] }) {
-  console.log(props.inputs);
   return <></>;
 }
