@@ -57,7 +57,7 @@ function Card() {
   return (
     <div
       className={
-        "border-2 border-black rounded-md w-full h-full max-w-[480px] max-h-2/3 bg-foreground"
+        "border-2 border-black rounded-md w-full h-full max-w-[480px] max-h-2/3 bg-foreground flex justify-center"
       }
     >
       <FormRenderer inputs={formInputs} />
@@ -82,7 +82,12 @@ function FormRenderer(props: { inputs: IFormInput[] }) {
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={handleSubmit}
+      className={
+        "flex flex-col gap-2 w-2/3 h-full justify-center items-center border-2"
+      }
+    >
       {inputs.map((input: IFormInput) => {
         return <FormInput input={input} key={input.name} />;
       })}
@@ -98,19 +103,22 @@ function FormInput(props: { input: IFormInput }) {
   };
   const { input } = props;
   return (
-    <input
-      className={"border-2 border-black"}
-      name={input.name}
-      value={inputValue}
-      onChange={handleChange}
-      pattern={input.regex}
-      required={input.required || false}
-      onInvalid={(e: InvalidEvent<HTMLInputElement>) =>
-        e.target.setCustomValidity(input.description)
-      }
-      onInput={(e: InvalidEvent<HTMLInputElement>) =>
-        e.target.setCustomValidity("")
-      }
-    />
+    <>
+      <label className={"w-full"}>{input.label}</label>
+      <input
+        className={"border-2 border-black"}
+        name={input.name}
+        value={inputValue}
+        onChange={handleChange}
+        pattern={input.regex}
+        required={input.required || false}
+        onInvalid={(e: InvalidEvent<HTMLInputElement>) =>
+          e.target.setCustomValidity(input.description)
+        }
+        onInput={(e: InvalidEvent<HTMLInputElement>) =>
+          e.target.setCustomValidity("")
+        }
+      />
+    </>
   );
 }
