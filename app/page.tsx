@@ -1,6 +1,14 @@
 "use client";
 
-import { ChangeEvent, FormEvent, useState } from "react";
+import {
+  ChangeEvent,
+  FormEvent,
+  InvalidEvent,
+  RefObject,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 export default function Home() {
   return (
@@ -17,16 +25,32 @@ interface IFormInput {
   label: string;
   name: string;
   regex: string;
+  description: string;
+  required?: boolean;
 }
 function Card() {
   const formInputs: IFormInput[] = [
-    { label: "First Name", name: "first_name", regex: `[\\S]{1,}` },
+    {
+      label: "First Name",
+      name: "first_name",
+      regex: `\\w`,
+      description: "Please enter first name",
+      required: true,
+    },
 
-    { label: "Last Name", name: "last_name", regex: "[A-Za-z]+" },
+    {
+      label: "Last Name",
+      name: "last_name",
+      regex: "\\w",
+      description: "Please enter your last name",
+      required: true,
+    },
     {
       label: "Email",
       name: "email",
-      regex: "[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$",
+      regex: "[a-z0-9._%+\\-]+@[a-z0-9.\\-]+\\.[a-z]{2,}$",
+      description: "Please Enter Valid Email",
+      required: true,
     },
   ];
 
@@ -80,6 +104,13 @@ function FormInput(props: { input: IFormInput }) {
       value={inputValue}
       onChange={handleChange}
       pattern={input.regex}
+      required={input.required || false}
+      onInvalid={(e: InvalidEvent<HTMLInputElement>) =>
+        e.target.setCustomValidity(input.description)
+      }
+      onInput={(e: InvalidEvent<HTMLInputElement>) =>
+        e.target.setCustomValidity("")
+      }
     />
   );
 }
