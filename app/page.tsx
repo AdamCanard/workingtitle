@@ -38,7 +38,7 @@ function Card() {
         method: "POST",
         body: formData,
       });
-      console.log(await response.json());
+      if (response.status === 201) console.log(await response.json());
     } catch (e) {
       console.log(e);
     }
