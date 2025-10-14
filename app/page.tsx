@@ -103,8 +103,8 @@ function FormInput(props: { input: IFormInput }) {
   };
   const { input } = props;
   return (
-    <>
-      <label className={"w-full"}>{input.label}</label>
+    <div className={"w-full"}>
+      <label>{input.label}</label>
       <input
         className={"border-2 border-black"}
         name={input.name}
@@ -119,6 +119,6 @@ function FormInput(props: { input: IFormInput }) {
           e.target.setCustomValidity("")
         }
       />
-    </>
+    </div>
   );
 }
